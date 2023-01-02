@@ -1,0 +1,22 @@
+{
+    "name": "huckinb/navio-api-client",
+    "description": "Unofficial PHP Api Client for the TruckersMP API",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "guzzlehttp/guzzle": "^6.5.0|^7.4.2",
+        "nesbot/carbon": "2.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HuckinB\\NavioApiClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vasile Velesco",
+            "email": "velescovasile40@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
