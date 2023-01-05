@@ -1,6 +1,6 @@
 {
-    "name": "huckinb/navio-api-client",
-    "description": "Unofficial PHP Api Client for the TruckersMP API",
+    "name": "velesco/truckershub-api-client",
+    "description": "Unofficial PHP Api Client for the Tuckershub API",
     "require": {
         "php": "^7.4 || ^8.0",
         "guzzlehttp/guzzle": "^6.5.0|^7.4.2",
@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "HuckinB\\NavioApiClient\\": "src/"
+            "Velesco\\TruckersHubApiClient\\": "src/"
         }
     },
     "authors": [
