@@ -51,11 +51,8 @@ class Company
      */
     public function __construct(array $company) {
         $this->id = $company['id'];
-        $this->globalId = $company['global_id'];
         $this->name = $company['name'];
-        $this->logo = $company['logo_url'];
-        $this->discordRPC = new DiscordRPC($company['discord_rpc']);
-        $this->liveDrivers = $company['live_drivers'];
+        $this->logo = $company['logo'];
     }
 
     public function getId(): int
@@ -63,10 +60,6 @@ class Company
         return $this->id;
     }
 
-    public function getGlobalId(): int
-    {
-        return $this->globalId;
-    }
 
     public function getName(): string
     {
@@ -78,13 +71,4 @@ class Company
         return $this->logo;
     }
 
-    public function getDiscordRPC(): object
-    {
-        return $this->discordRPC;
-    }
-
-    public function getLiveDriverCount(): int
-    {
-        return $this->liveDrivers;
-    }
 }

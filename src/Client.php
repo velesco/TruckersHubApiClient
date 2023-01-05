@@ -27,35 +27,7 @@ class Client extends AbstractClient
         return $drivers;
     }
 
-    public function getLatestVersion()
-    {
-        $versionData = $this->get('client/versions/latest');
 
-        return new ClientVersion($versionData);
-    }
-
-    public function addDriver(string $steam_id): Driver
-    {
-        $data = [
-            'steam_id' => $steam_id
-        ];
-
-        $response = $this->post('drivers', $data);
-
-        return new Driver($response);
-    }
-
-    public function removeDriver(string $steam_id)
-    {
-        return $this->delete('drivers/' . $steam_id);
-    }
-
-    public function getDriver(string $steam_id)
-    {
-        $driverData = $this->get('drivers/' . $steam_id);
-
-        return new Driver($driverData);
-    }
 
 
 }
