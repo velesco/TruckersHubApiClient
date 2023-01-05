@@ -3,7 +3,8 @@
 ## Introduction
 
 Please note: This is not an Official Client for Navio.
-The Navio PHP Client grants users easier access to the Navio API. Allowing you to implement adding/removing drivers as well as retrieving drivers from the Navio System.
+The Navio PHP Client grants users easier access to the Navio API. Allowing you to implement adding/removing drivers as
+well as retrieving drivers from the Navio System.
 
 ## Requirements
 
@@ -30,8 +31,6 @@ To use the package, use Composer's [autoload](https://getcomposer.org/doc/01-bas
 ```php
 require_once('vendor/autoload.php');
 ```
-
-
 
 ## License
 
