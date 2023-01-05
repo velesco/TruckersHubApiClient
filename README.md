@@ -1,9 +1,6 @@
 <p align="center"><img src="https://truckershub.in/images/logo.png"></p>
 
-## Introduction
 
-Please note: This is not an Official Client for Navio.
-The Navio PHP Client grants users easier access to the Navio API. Allowing you to implement adding/removing drivers as well as retrieving drivers from the Navio System.
 
 ## Requirements
 
