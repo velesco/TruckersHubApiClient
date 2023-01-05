@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/truckspace/art/main/navio/logo.svg"></p>
+<p align="center"><img src="https://truckershub.in/images/logo.png"></p>
 
 ## Introduction
 
@@ -12,8 +12,8 @@ The Navio PHP Client grants users easier access to the Navio API. Allowing you t
 - API Key is set in config/services.php
 
 ```php
-  'navio' => [
-    'apikey' => env('NAVIO_API_KEY'),
+  'truckershub' => [
+    'apikey' => env('TRUCKERSHUB_API_KEY'),
   ],
 ```
 
@@ -22,7 +22,7 @@ The Navio PHP Client grants users easier access to the Navio API. Allowing you t
 You can install the package via [Composer](https://getcomposer.org). Run the following command:
 
 ```bash
-composer require huckinb/navio-api-client
+composer require velesco/truckers-hub-api-client
 ```
 
 To use the package, use Composer's [autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
@@ -31,13 +31,7 @@ To use the package, use Composer's [autoload](https://getcomposer.org/doc/01-bas
 require_once('vendor/autoload.php');
 ```
 
-## Navio Documentation
 
-Documentation for API can be found on the [Docs](https://docs.navio.app/api-getting-started).
-
-## Support
-
-If you have any questions about the client, please create an issues ticket [New](https://github.com/HuckinB/Navio-API-Client/issues/new)
 
 ## License
 
