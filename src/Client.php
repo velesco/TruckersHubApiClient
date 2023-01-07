@@ -25,6 +25,13 @@ class Client extends AbstractClient
 
         return $jobs;
     }
+    public function getJob(int $id)
+    {
+        $jobData = $this->get('jobs/' . $id)['data'];
+
+        return new Job($jobData);
+    }
+
     public function getDrivers()
     {
         $driversData = $this->get('drivers')['data'];
@@ -36,14 +43,14 @@ class Client extends AbstractClient
         return $drivers;
     }
 
-    public function addDriver(string $steam_id):Driver
+    public function addDriver(string $steam_id)
     {
         $data = [
             'steamID' => $steam_id
         ];
 
         $response = $this->post('drivers', $data);
-        return new Driver($response);
+        return $response;
     }
 
     public function removeDriver(string $steam_id)
