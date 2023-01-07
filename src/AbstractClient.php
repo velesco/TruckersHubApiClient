@@ -51,7 +51,7 @@ class AbstractClient
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'Authorization' => 'Bearer '. $this->api_token,
+                'Authorization' => $this->api_token,
             ]
         ]);
 
@@ -91,7 +91,7 @@ class AbstractClient
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'Authorization' => 'Bearer '. $this->api_token,
+                'Authorization' => $this->api_token,
             ]
         ]);
 
@@ -139,7 +139,7 @@ class AbstractClient
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'Authorization' => 'Bearer '. $this->api_token,
+                'Authorization' => $this->api_token,
             ]
         ]);
 

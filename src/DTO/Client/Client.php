@@ -4,31 +4,16 @@ namespace Velesco\TruckersHubApiClient\DTO\Client;
 
 class Client
 {
-    /**
-     * Whether the driver has the client installed.
-     *
-     * @var bool
-     */
+
     protected $is_installed;
 
-    /**
-     * The version of the installed client.
-     *
-     * @var ClientVersion|null
-     */
-    protected ?ClientVersion $version;
+    protected $version;
 
-    /**
-     * The settings of the installed client.
-     *
-     * @var array
-     */
-    protected $settings;
+
 
     public function __construct(array $client) {
-        $this->is_installed = $client['is_installed'];
-        $this->version = $client['version'] ? new ClientVersion($client['version']) : null;
-        $this->settings = new ClientSettings($client['settings']);
+        $this->is_installed = $client['isInstalled'];
+        $this->version = $client['version'];
     }
 
     public function isInstalled(): bool
@@ -36,13 +21,9 @@ class Client
         return $this->is_installed;
     }
 
-    public function getVersion(): ?ClientVersion
+    public function getVersion()
     {
         return $this->version;
     }
 
-    public function getSettings(): object
-    {
-        return $this->settings;
-    }
 }

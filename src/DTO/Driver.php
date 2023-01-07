@@ -21,12 +21,6 @@ class Driver
      */
     protected ?int $steamId;
 
-    /**
-     * The Truckspace of the driver.
-     *
-     * @var string|null
-     */
-    protected ?string $truckspaceId;
 
     /**
      * The username of the driver.
@@ -43,14 +37,14 @@ class Driver
     protected $avatar;
 
     /**
-     * The TruckersHub Client of the driver.
+     * The Navio Client of the driver.
      *
      * @var Client|null
      */
     protected ?Client $client;
 
     /**
-     * Whether the user is banned from TruckersHub.
+     * Whether the user is banned from Navio.
      *
      * @var boolean
      */
@@ -64,13 +58,12 @@ class Driver
     protected Carbon $last_seen_at;
 
     public function __construct(array $driver) {
-        $this->id = $driver['id'];
-        $this->steamId = $driver['steam_id'];
+        $this->id = $driver['userID'];
+        $this->steamId = $driver['steamID'];
         $this->username = $driver['username'];
-        $this->avatar = $driver['profile_photo_url'];
+        $this->avatar = $driver['avatar'];
         $this->client = new Client($driver['client']);
-        $this->isBanned = $driver['is_banned'];
-        $this->last_seen_at = Carbon::parse($driver['last_active']);
+        $this->last_seen_at = Carbon::parse($driver['client']['lastActive']);
     }
 
     public function getId(): int
@@ -83,10 +76,6 @@ class Driver
         return $this->steamId;
     }
 
-    public function getTruckspaceId(): ?string
-    {
-        return $this->truckspaceId;
-    }
 
     public function getUsername(): string
     {

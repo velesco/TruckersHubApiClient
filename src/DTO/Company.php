@@ -11,12 +11,7 @@ class Company
      */
     protected $id;
 
-    /**
-     * The Global ID of the company.
-     *
-     * @var int
-     */
-    protected $globalId;
+
 
     /**
      * The name of the company.
@@ -25,6 +20,8 @@ class Company
      */
     protected $name;
 
+    protected $owner;
+
     /**
      * The url of the company logo.
      *
@@ -32,27 +29,16 @@ class Company
      */
     protected $logo;
 
-    /**
-     * The ID's for Discord RPC.
-     *
-     * @var array
-     */
-    protected $discordRPC;
-
-    /**
-     * The amount of live drivers.
-     *
-     * @var int
-     */
-    protected $liveDrivers;
 
     /**
      * Create a new Company Instance
      */
     public function __construct(array $company) {
-        $this->id = $company['id'];
-        $this->name = $company['name'];
-        $this->logo = $company['logo'];
+
+        $this->id = $company['data']['id'];
+        $this->owner = $company['data']['owner'];
+        $this->name = $company['data']['name'];
+        $this->logo = $company['data']['logo'];
     }
 
     public function getId(): int
