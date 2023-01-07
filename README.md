@@ -23,7 +23,7 @@ well as retrieving drivers from the Navio System.
 You can install the package via [Composer](https://getcomposer.org). Run the following command:
 
 ```bash
-composer require velesco/truckers-hub-api-client
+composer require velesco/truckershub-api-client
 ```
 
 To use the package, use Composer's [autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
