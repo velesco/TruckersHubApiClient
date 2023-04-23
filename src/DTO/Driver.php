@@ -27,12 +27,12 @@ class Driver
     protected Carbon $last_seen_at;
 
     public function __construct(array $driver) {
+
         $this->id = $driver['userID'];
         $this->steamID = $driver['steamID'];
         $this->username = $driver['username'];
         $this->avatar = $driver['avatar'];
-        $this->client = new Client($driver['client']);
-//        $this->last_seen_at = Carbon::parse($driver['client']['lastActive']);
+        $this->last_seen_at = Carbon::parse($driver['client']['lastActive']  ?? '');
     }
 
     public function getId(): int

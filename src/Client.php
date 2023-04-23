@@ -15,9 +15,11 @@ class Client extends AbstractClient
         return new Company($companyData);
     }
 
-    public function getJobs()
+    public function getJobs(int $page)
     {
-        $jobsData = $this->get('jobs')['data'];
+
+
+        $jobsData = $this->get('jobs?page='.$page ?? 0)['data'];
         $jobs = [];
         foreach($jobsData as $jobData) {
             $jobs[] = new Job($jobData);
@@ -60,7 +62,7 @@ class Client extends AbstractClient
 
     public function getDriver(string $steam_id)
     {
-        $driverData = $this->get('drivers/' . $steam_id);
+        $driverData = $this->get('drivers/' . $steam_id)['data'];
 
         return new Driver($driverData);
     }
